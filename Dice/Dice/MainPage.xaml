@@ -1,0 +1,73 @@
+﻿<phone:PhoneApplicationPage 
+    x:Class="Dice.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" d:DesignWidth="480" d:DesignHeight="768"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    shell:SystemTray.IsVisible="True">
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <!--ContentPanel - place additional content here-->
+        <Grid x:Name="ContentPanel">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <TextBlock Margin="5" Grid.Row="0" Grid.Column="0">Top 3:</TextBlock>
+            <Grid Grid.Row="0" Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"></RowDefinition>
+                    <RowDefinition Height="auto"></RowDefinition>
+                    <RowDefinition Height="auto"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="auto"></ColumnDefinition>
+                    <ColumnDefinition Width="auto"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <TextBlock VerticalAlignment="Center" Margin="5" Grid.Row="0" Grid.Column="0">#1</TextBlock>
+                <TextBlock VerticalAlignment="Center" Margin="5" Grid.Row="1" Grid.Column="0">#2</TextBlock>
+                <TextBlock VerticalAlignment="Center" Margin="5" Grid.Row="2" Grid.Column="0">#3</TextBlock>
+                <Image Name="ImageRank1" Height="75" Width="75" Grid.Row="0" Grid.Column="1"></Image>
+                <Image Name="ImageRank2" Height="75" Width="75" Grid.Row="1" Grid.Column="1"></Image>
+                <Image Name="ImageRank3" Height="75" Width="75" Grid.Row="2" Grid.Column="1"></Image>
+                <TextBlock VerticalAlignment="Center" Margin="5" Name="Rank1" Grid.Row="0" Grid.Column="2">test1</TextBlock>
+                <TextBlock VerticalAlignment="Center" Margin="5" Name="Rank2" Grid.Row="1" Grid.Column="2">test2</TextBlock>
+                <TextBlock VerticalAlignment="Center" Margin="5" Name="Rank3" Grid.Row="2" Grid.Column="2">test3</TextBlock>
+              
+            </Grid>
+            <TextBlock Margin="5" Grid.Row="1" Grid.Column="0">Wins in the row:</TextBlock>
+            <TextBlock Name="PlayerWins" Margin="5" Grid.Row="1" Grid.Column="1">0</TextBlock>
+
+            <TextBlock Margin="5" Grid.Row="2" Grid.Column="0">Player count:</TextBlock>
+            <TextBlock Margin="5" Grid.Row="3" Grid.Column="0">Dealer count:</TextBlock>
+            <TextBlock Name="PlayerCount" Margin="5" Grid.Row="2" Grid.Column="1">0</TextBlock>
+            <TextBlock Name="DealerCount" Margin="5" Grid.Row="3" Grid.Column="1">0</TextBlock>
+            <TextBlock Margin="5" Grid.Row="4" Grid.Column="0">Dices rolled:</TextBlock>
+            <StackPanel Grid.Row="4" Grid.Column="1" Margin="5" Orientation="Horizontal">
+                <Image Margin="5" Name="Dice1" Source="images/1.jpg"></Image>
+                <Image Margin="5" Name="Dice2" Source="images/1.jpg"></Image>
+            </StackPanel>
+            <Button Name="RollButton" Grid.Row="5" Grid.Column="0" Width="auto" Height="100" Click="RollButton_Click">Roll</Button>
+            <Button Name="Check" Grid.Row="5" Grid.Column="1" Width="auto" Height="100" Click="Check_Click">Dealer turn/Check win</Button>
+        </Grid>
+    </Grid>
+ 
+</phone:PhoneApplicationPage>
