@@ -66,7 +66,8 @@
                 <Image Margin="5" Name="Dice2" Source="images/1.jpg"></Image>
             </StackPanel>
             <Button Name="RollButton" Grid.Row="5" Grid.Column="0" Width="auto" Height="100" Click="RollButton_Click">Roll</Button>
-            <Button Name="Check" Grid.Row="5" Grid.Column="1" Width="auto" Height="100" Click="Check_Click">Dealer turn/Check win</Button>
+            <Button Name="CheckButton" Grid.Row="5" Grid.Column="1" Width="auto" Height="100" Click="Check_Click">Dealer turn/Check win</Button>
+            <TextBlock Name="InfoBox" Grid.Row="5" Grid.ColumnSpan="2" Height="100" Visibility="Collapsed"></TextBlock>
             <StackPanel Grid.Row="6" Grid.ColumnSpan="2" >
                 <Button Name="RestartGame" Width="200" Height="100" Click="RestartGame_Click">Restart</Button>
                 <TextBox Name="PlayerNameBox" Text="Player"></TextBox>
